@@ -1,5 +1,6 @@
 body {
     margin: 0%;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .nav {
@@ -7,7 +8,7 @@ body {
     display: flex;
     align-self: center;
     justify-content: space-between;
-    background-color:#C3DBFF;
+    background-color:#92BDFF;
     height: 105px;
 }
 .nav-item {
@@ -38,6 +39,11 @@ body {
     font-size: 60px;
 }
 
+#description{
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
 .half{
     width: 50%
 }
@@ -46,6 +52,14 @@ body {
     width: 50%;
     display: flex;
     justify-content: flex-end;
+}
+
+.line{
+    display: flex;
+    width: 400px;
+    height: 47px;
+    border-bottom: 1px solid black;
+    justify-self: center;
 }
 
 .box {
@@ -97,4 +111,20 @@ body {
   a:hover::before {
     visibility: visible;
     transform: scaleX(1);
+  }
+
+  #picture img{
+    margin: 10% auto;
+    width: 900px;
+    height: 100%;
+    display: block;
+    
+  }
+
+  .blue{
+      background-color: #C9DFFF;
+  }
+
+  .margin {
+      margin: 5%;
   }
