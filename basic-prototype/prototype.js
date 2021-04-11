@@ -11,7 +11,8 @@ function submit() {
     numPeople = parseFloat(document.getElementById("numPeople").value);
     splitAmount = (subtotal + tax + tip) / numPeople;
 
-    document.getElementById("results").innerHTML = splitAmount.toString();
+    resultString = "Everyone pays: $" + splitAmount.toString();
+    document.getElementById("results").innerHTML = resultString;
     console.log(splitAmount);
 }
 
@@ -62,8 +63,8 @@ function submitRandom() {
     let resultString = ""
 
     for (var i = 0; i < numPeople; i++) {
-        resultString = resultString + "Person " + (i + 1).toString() + " pays: ";
-        resultString = resultString + percentArray[i].toString() + "\n";
+        resultString = resultString + "Person " + (i + 1).toString() + " pays: $";
+        resultString = resultString + percentArray[i].toString();
     }
 
     document.getElementById("results").innerHTML = resultString;
