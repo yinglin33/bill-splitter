@@ -2,9 +2,33 @@
 <html>
     <head> <title> TITLEEE </title>
         <link rel="stylesheet" href="splitter.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&display=swap" rel="stylesheet">
     </head>
     <body>
-        <script src="splitter.js"></script>
-        <div class="nav"></div>
+        <script src="./splitter.js"></script>
+        <div class="nav">
+            <div id="title">billsplitter</div>
+        
+        </div>
+        
+
+    
+        <h1>Bill Info</h1>
+        <div>
+            <input type="text" id="subtotal" placeholder="Subtotal">
+            <input type="text" id="tax" placeholder="Tax Amount">
+            <input type="text" id="tip" placeholder="Tip">
+            <input type="text" id="numPeople" placeholder="Number of People">
+        </div>
+        <br>
+        <button onclick="submit()">Submit</button>
+        <button onclick="submitRandom()">Submit Random</button>
+        <div>
+            <p id="results">These are the results...</p>
+        </div>
+    
+
+
+
     </body>
 </html>
