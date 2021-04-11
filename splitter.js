@@ -59,17 +59,33 @@ function submitRandom() {
             currentLeft = currentLeft - splitValue;
         }
     }
-
-    percentArray = shuffle(percentArray); //shuffles payment array randomly
-
+    console.log(paymentArray);
+    // percentArray = shuffle(percentArray); // shuffles payment array randomly
+    percentArray = shuffle(paymentArray); // shuffles payment array randomly
 
     //updating screen after submission
-    let resultString = ""
+    let resultString = "";
 
     for (var i = 0; i < numPeople; i++) {
-        resultString = resultString + "Person " + (i + 1).toString() + " pays: $";
-        resultString = resultString + percentArray[i].toString();
+        resultString = resultString + "Person " + (i + 1).toString() + " pays: $" ;
+        resultString = resultString + percentArray[i].toString() + "<br>";
     }
 
     document.getElementById("results").innerHTML = resultString;
 }
+
+function selectRandom() {
+    subtotal = parseFloat(document.getElementById("subtotal").value);
+    tax = parseFloat(document.getElementById("tax").value);
+    tip = parseFloat(document.getElementById("tip").value);
+    numPeople = parseFloat(document.getElementById("numPeople").value);
+
+    let randomPeople = Math.floor(Math.random() * (numPeople + 1) );
+    let total = subtotal + tax + tip;
+
+    //updating screen after submission
+    let resultString = "Person " + randomPeople.toString() + " pays: $" + total.toString();
+
+    document.getElementById("results").innerHTML = resultString;
+}
+

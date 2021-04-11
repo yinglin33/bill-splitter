@@ -1,6 +1,6 @@
 <!DOCTYPE HTML> 
 <html>
-    <head> <title> TITLEEE </title>
+    <head> <title> bill.split </title>
         <link rel="stylesheet" href="splitter.css">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&display=swap" rel="stylesheet">
     </head>
@@ -8,12 +8,15 @@
         <script src="./splitter.js"></script>
         <div class="nav">
             <div id="title">billsplitter</div>
-        
+            <div class="half-right">
+                <A HREF="about.html" class="nav-item left">ABOUT</A>
+                <A HREF="splitter.html" class="nav-item">SPLIT</A>
+            </div>
         </div>
         
         <div class="half">
             <div class= "box">
-                <h1>Split Up Your Bill!</h1>
+                <h1>Split Your Bill!</h1>
                 <div>
                     <input type="text" id="subtotal" placeholder="Subtotal">
                     <input type="text" id="tax" placeholder="Tax Amount">
@@ -21,22 +24,35 @@
                     <input type="text" id="numPeople" placeholder="Number of People">
                 </div>
                 <br>
-                <button onclick="submit()">Submit</button>
-                <button onclick="submitRandom()">Submit Random</button>
+                <div class="buttons">
+                    <!--
+                    <button class="btn effect04" onclick="submit()">Submit</button>
+                    <button class="big-button" onclick="submitRandom()">Submit Random</button>
+                    -->
+                    <div class="container">
+                        <a class="btn effect04" onclick="submit()"data-sm-link-text="split!" target="_blank">
+                            <span>boring split</span>
+                        </a>
+                        <br>
+                        <a class="btn effect04" onclick="submitRandom()" data-sm-link-text="you sure?" target="_blank">
+                            <span>chaotic split</span>
+                        </a>
+                        <br>
+                        <a class="btn effect04" onclick="selectRandom()" data-sm-link-text="you sure?" target="_blank">
+                            <span>unfortunate split</span>
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="box">
                 <div>
-                    <p id="results">These are the results...</p>
+                    <h1 id="results">Here are the results!
+                        <br>
+                    </h1>
                 </div>
             </div>
         </div>
-
-        <div class="half">
-            <div class="box"></div>
-        </div>
-    
-       
-    
-
-
-
     </body>
 </html>
