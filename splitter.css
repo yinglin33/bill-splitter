@@ -3,19 +3,38 @@ body {
 }
 
 .nav {
-    
+    font-family: 'Montserrat', sans-serif;
     display: flex;
     justify-content: flex-start;
     align-self: center;
     background-color:#C3DBFF;
     height: 110px;
 }
+.nav-item {
+    color: #2a2d34;
+    float: right;
+    display: block;
+    text-align: center;
+    padding: 22px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 500;
+    
+}
+.nav-item::after {
+    display: block;
+    content: '';
+    border-bottom: solid 3px #1e1c25;
+    transform: scaleX(0);
+    transition: 350ms ease-in-out;
+    transform-origin: 0% 50%;
+}
 
 #title {
-    font-style: italic;
-    font-weight: 400;
+    font-style: bold;
+    font-weight: 10000;
     color: white;
-    font-family: 'Montserrat', sans-serif;
+    
     font-size: 60px;
 }
 
