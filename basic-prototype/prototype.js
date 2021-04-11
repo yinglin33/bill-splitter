@@ -22,6 +22,7 @@ function submitRandom() {
     tip = parseFloat(document.getElementById("tip").value);
     numPeople = parseFloat(document.getElementById("numPeople").value);
 
+    //splits a number using random, up to 50%
     function split(currentTotal) {
         let randomNumber = currentTotal * Math.random() * 0.5; //only up to 50% of what's left
         let roundedSplit = Math.round(randomNumber * 100) / 100; //rounded to 2 decimal places
@@ -43,23 +44,26 @@ function submitRandom() {
         return array;
     }
 
-    let percentArray = [];
+    //dividing different values for payment and placing into an array
+    let paymentArray = [];
     let currentLeft = subtotal + tax + tip;
 
     for (var i = 0; i < numPeople; i++) {
         if (i == numPeople - 1) {
-            percentArray.push(Math.round(currentLeft * 100) / 100); //rounding
+            paymentArray.push(Math.round(currentLeft * 100) / 100); //rounding
             currentLeft = 0.00;
         }
         else {
             splitValue = split(currentLeft);
-            percentArray.push(splitValue);
+            paymentArray.push(splitValue);
             currentLeft = currentLeft - splitValue;
         }
     }
 
-    percentArray = shuffle(percentArray);
+    percentArray = shuffle(percentArray); //shuffles payment array randomly
 
+
+    //updating screen after submission
     let resultString = ""
 
     for (var i = 0; i < numPeople; i++) {
